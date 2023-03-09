@@ -79,6 +79,7 @@ namespace LogRegPage
             this.DeleteAcc.TabIndex = 3;
             this.DeleteAcc.Text = "Delete";
             this.DeleteAcc.UseVisualStyleBackColor = true;
+            this.DeleteAcc.Click += new System.EventHandler(this.DeleteAcc_Click);
             // 
             // MainMenu
             // 

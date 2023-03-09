@@ -24,5 +24,11 @@ namespace LogRegPage.Repositories
             _geoQuestContext.SaveChanges();
             return true;
         }
+        public bool Delete(User user)
+        {
+            _geoQuestContext.Users.Remove(user);
+            _geoQuestContext.SaveChanges();
+            return true;
+        }
     }
 }

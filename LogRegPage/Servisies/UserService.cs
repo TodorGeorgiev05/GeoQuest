@@ -28,5 +28,9 @@ namespace LogRegPage.Servisies
             Session.CurrentUser.Grade = grade;
             return _userRepository.Update(Session.CurrentUser);
         }
+        public bool Delete(User user)
+        {
+            return _userRepository.Delete(Session.CurrentUser);
+        }
     }
 }

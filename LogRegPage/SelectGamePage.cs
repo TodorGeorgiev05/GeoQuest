@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using LogRegPage.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,6 +38,23 @@ namespace LogRegPage
             this.Hide();
             UpdateAccount update = new UpdateAccount();
             update.Show();
+        }
+
+        private void DeleteAcc_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure to DELETE this account?","Delete",MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Session.UserService.Delete(Session.CurrentUser);
+                this.Hide();
+                MainPage mainPage = new MainPage();
+                mainPage.Show();
+            }
+            else
+            {
+                this.Hide();
+                SelectGamePage selectGamePage = new SelectGamePage();
+                selectGamePage.Show();
+            }
         }
     }
 }

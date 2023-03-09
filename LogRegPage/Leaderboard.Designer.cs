@@ -35,6 +35,7 @@ namespace LogRegPage
             this.Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ButtonForGeneratingLeaderboard = new System.Windows.Forms.Button();
             this.GradeSelector = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.NGSdataGV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,9 +80,9 @@ namespace LogRegPage
             // 
             // ButtonForGeneratingLeaderboard
             // 
-            this.ButtonForGeneratingLeaderboard.Location = new System.Drawing.Point(669, 246);
+            this.ButtonForGeneratingLeaderboard.Location = new System.Drawing.Point(661, 245);
             this.ButtonForGeneratingLeaderboard.Name = "ButtonForGeneratingLeaderboard";
-            this.ButtonForGeneratingLeaderboard.Size = new System.Drawing.Size(75, 23);
+            this.ButtonForGeneratingLeaderboard.Size = new System.Drawing.Size(96, 23);
             this.ButtonForGeneratingLeaderboard.TabIndex = 3;
             this.ButtonForGeneratingLeaderboard.Text = "Select";
             this.ButtonForGeneratingLeaderboard.UseVisualStyleBackColor = true;
@@ -109,11 +110,22 @@ namespace LogRegPage
             this.GradeSelector.TabIndex = 4;
             this.GradeSelector.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(661, 291);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(96, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Main Page";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Leaderboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.GradeSelector);
             this.Controls.Add(this.ButtonForGeneratingLeaderboard);
             this.Controls.Add(this.NGSdataGV);
@@ -131,5 +143,6 @@ namespace LogRegPage
         private System.Windows.Forms.DataGridViewTextBoxColumn Score;
         private System.Windows.Forms.Button ButtonForGeneratingLeaderboard;
         private System.Windows.Forms.ComboBox GradeSelector;
+        private System.Windows.Forms.Button button1;
     }
 }
