@@ -177,6 +177,11 @@
     <Compile Include="MapGame.Designer.cs">
       <DependentUpon>MapGame.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20230320204327_database.cs" />
+    <Compile Include="Migrations\20230320204327_database.designer.cs">
+      <DependentUpon>20230320204327_database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\GeoQuestContextModelSnapshot.cs" />
     <Compile Include="WordGame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,11 +206,6 @@
     <Compile Include="MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20230312090916_test.cs" />
-    <Compile Include="Migrations\20230312090916_test.designer.cs">
-      <DependentUpon>20230312090916_test.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\GeoQuestContextModelSnapshot.cs" />
     <Compile Include="Models\LeaderboardDTO.cs" />
     <Compile Include="Models\Score.cs" />
     <Compile Include="Models\User.cs" />

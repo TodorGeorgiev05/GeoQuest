@@ -46,6 +46,9 @@ namespace LogRegPage.Models
             });
             /*modelBuilder.Entity<Score>()
                 .HasOne(s => s.);*/
+            modelBuilder.Entity<User>()
+                .HasOne(x => x.HighScore);
+                /*.WithOne(y => y.User);*/
 
             OnModelCreatingPartial(modelBuilder);
         }

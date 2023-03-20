@@ -20,12 +20,14 @@ namespace LogRegPage.Repositories
             _geoQuestContext.SaveChanges();
             return true;
         }
+        public Score FindScoreByUserId(int userId)
+        {
+            return _geoQuestContext.Scores
+                .FirstOrDefault(x => x.Id == userId);
+        }
         public bool Delete(Score score)
         {
-            var scoree = _geoQuestContext.Scores
-                .SingleOrDefault(x => x.Users.ScoreId == x.Id);
-                
-            _geoQuestContext.Scores.Remove(scoree);
+            _geoQuestContext.Scores.Remove(score);
             _geoQuestContext.SaveChanges();
             return true;
         }

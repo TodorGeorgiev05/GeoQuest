@@ -1,4 +1,5 @@
 ﻿
+using LogRegPage.Models;
 using LogRegPage.Utils;
 using System;
 using System.Collections.Generic;
@@ -44,8 +45,9 @@ namespace LogRegPage
         {
             if (MessageBox.Show("Are you sure to DELETE this account?","Delete",MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                Session.ScoreService.Delete(Session.CurrentScore);
-                Session.UserService.Delete(Session.CurrentUser);
+                
+                Session.ScoreService.Delete(new Score(){User = Session.CurrentUser });
+               //  Session.UserService.Delete(Session.CurrentUser);
 
                 // ScoreService.Delete(Session.CurrentUser.ScoreId);
                 this.Hide();

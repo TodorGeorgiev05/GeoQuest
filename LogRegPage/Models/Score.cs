@@ -14,6 +14,6 @@ namespace LogRegPage.Models
         public int ScoreGameTwo { get; set; }
 
         //Navigations
-        public User Users { get; set; }
+        public User User { get; set; }
     }
 }

@@ -2,12 +2,12 @@
 
 namespace LogRegPage.Migrations
 {
-    public partial class test : Migration
+    public partial class database : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Score",
+                name: "Scores",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -17,7 +17,7 @@ namespace LogRegPage.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Score", x => x.Id);
+                    table.PrimaryKey("PK_Scores", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -30,15 +30,15 @@ namespace LogRegPage.Migrations
                     UserType = table.Column<string>(maxLength: 30, nullable: true),
                     Password = table.Column<string>(maxLength: 30, nullable: true),
                     Grade = table.Column<string>(maxLength: 30, nullable: true),
-                    ScoreId = table.Column<int>(nullable: false)
+                    ScoreId = table.Column<int>(maxLength: 30, nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_users", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_users_Score_ScoreId",
+                        name: "FK_users_Scores_ScoreId",
                         column: x => x.ScoreId,
-                        principalTable: "Score",
+                        principalTable: "Scores",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -46,7 +46,8 @@ namespace LogRegPage.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_users_ScoreId",
                 table: "users",
-                column: "ScoreId");
+                column: "ScoreId",
+                unique: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -55,7 +56,7 @@ namespace LogRegPage.Migrations
                 name: "users");
 
             migrationBuilder.DropTable(
-                name: "Score");
+                name: "Scores");
         }
     }
 }

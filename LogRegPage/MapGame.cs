@@ -84,7 +84,7 @@ namespace LogRegPage
                             {
                                 MessageBox.Show($"You won! Score: {score}");
 
-                                Session.ScoreService.UpdateMapGame(score);
+                                Session.ScoreService.UpdateMapGame(score, Session.CurrentUser.Id);
                                 return;
                             }
                             SetRandomCountry(countries);

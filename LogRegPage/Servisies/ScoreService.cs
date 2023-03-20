@@ -17,20 +17,34 @@ namespace LogRegPage.Servisies
         {
             _scoreRepository = scoreRepository;
         }
-        public bool UpdateFlagGame(int score)
+        public bool UpdateFlagGame(int score, int userId)
         {
-            Session.CurrentScore.ScoreGameOne = score;
-            Session.CurrentScore.ScoreGameTwo = score;
-            return _scoreRepository.Update(Session.CurrentScore);
+            var foundScore = _scoreRepository.FindScoreByUserId(userId);
+            if (foundScore == null)
+            {
+                return false;
+            }
+            foundScore.ScoreGameOne = score;
+            return _scoreRepository.Update(foundScore);
         }
-        public bool UpdateMapGame(int score)
+        public bool UpdateMapGame(int score, int userId)
         {
-            Session.CurrentScore.ScoreGameTwo = score;
-            return _scoreRepository.Update(Session.CurrentScore);
+            var foundScore = _scoreRepository.FindScoreByUserId(userId);
+            if (foundScore == null)
+            {
+                return false;
+            }
+            foundScore.ScoreGameTwo = score;
+            return _scoreRepository.Update(foundScore);
         }
         public bool Delete(Score score)
         {
-            return _scoreRepository.Delete(Session.CurrentScore);
+            var foundScore =_scoreRepository.FindScoreByUserId(score.User.Id);
+            if (foundScore == null)
+            {
+                return false;
+            }
+            return _scoreRepository.Delete(foundScore);
         }
     }
 }

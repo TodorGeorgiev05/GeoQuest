@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LogRegPage.Migrations
 {
     [DbContext(typeof(GeoQuestContext))]
-    [Migration("20230312090916_test")]
-    partial class test
+    [Migration("20230320204327_database")]
+    partial class database
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -36,7 +36,7 @@ namespace LogRegPage.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Score");
+                    b.ToTable("Scores");
                 });
 
             modelBuilder.Entity("LogRegPage.Models.User", b =>
@@ -55,7 +55,8 @@ namespace LogRegPage.Migrations
                         .HasMaxLength(30);
 
                     b.Property<int>("ScoreId")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasMaxLength(30);
 
                     b.Property<string>("UserName")
                         .HasColumnType("nvarchar(30)")
@@ -67,16 +68,17 @@ namespace LogRegPage.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ScoreId");
+                    b.HasIndex("ScoreId")
+                        .IsUnique();
 
                     b.ToTable("users");
                 });
 
             modelBuilder.Entity("LogRegPage.Models.User", b =>
                 {
-                    b.HasOne("LogRegPage.Models.Score", "Score")
-                        .WithMany("Users")
-                        .HasForeignKey("ScoreId")
+                    b.HasOne("LogRegPage.Models.Score", "HighScore")
+                        .WithOne("User")
+                        .HasForeignKey("LogRegPage.Models.User", "ScoreId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
