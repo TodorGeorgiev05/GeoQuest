@@ -44,7 +44,10 @@ namespace LogRegPage
         {
             if (MessageBox.Show("Are you sure to DELETE this account?","Delete",MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
+                Session.ScoreService.Delete(Session.CurrentScore);
                 Session.UserService.Delete(Session.CurrentUser);
+
+                // ScoreService.Delete(Session.CurrentUser.ScoreId);
                 this.Hide();
                 MainPage mainPage = new MainPage();
                 mainPage.Show();
@@ -55,6 +58,20 @@ namespace LogRegPage
                 SelectGamePage selectGamePage = new SelectGamePage();
                 selectGamePage.Show();
             }
+        }
+
+        private void FlagGame_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FlagGame flagGame = new FlagGame();
+            flagGame.Show();
+        }
+
+        private void SecondGame_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MapGame mapGame = new MapGame();
+            mapGame.Show();
         }
     }
 }

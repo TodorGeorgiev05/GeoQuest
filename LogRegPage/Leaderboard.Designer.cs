@@ -30,12 +30,15 @@ namespace LogRegPage
         private void InitializeComponent()
         {
             this.NGSdataGV = new System.Windows.Forms.DataGridView();
-            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ButtonForGeneratingLeaderboard = new System.Windows.Forms.Button();
             this.GradeSelector = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Test = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ScoreGameOne = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ScoreGameTwo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.NGSdataGV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,38 +48,16 @@ namespace LogRegPage
             this.NGSdataGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.UserName,
             this.Grade,
-            this.Score});
-            this.NGSdataGV.Location = new System.Drawing.Point(27, 12);
+            this.Test,
+            this.ScoreGameOne,
+            this.ScoreGameTwo});
+            this.NGSdataGV.Location = new System.Drawing.Point(43, 12);
             this.NGSdataGV.Name = "NGSdataGV";
             this.NGSdataGV.RowHeadersWidth = 51;
             this.NGSdataGV.RowTemplate.Height = 24;
             this.NGSdataGV.Size = new System.Drawing.Size(570, 426);
             this.NGSdataGV.TabIndex = 2;
             this.NGSdataGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NGSdataGV_CellContentClick);
-            // 
-            // UserName
-            // 
-            this.UserName.DataPropertyName = "UserName";
-            this.UserName.HeaderText = "Name";
-            this.UserName.MinimumWidth = 6;
-            this.UserName.Name = "UserName";
-            this.UserName.Width = 125;
-            // 
-            // Grade
-            // 
-            this.Grade.DataPropertyName = "Grade";
-            this.Grade.HeaderText = "Grade";
-            this.Grade.MinimumWidth = 6;
-            this.Grade.Name = "Grade";
-            this.Grade.Width = 125;
-            // 
-            // Score
-            // 
-            this.Score.DataPropertyName = "Score";
-            this.Score.HeaderText = "Score";
-            this.Score.MinimumWidth = 6;
-            this.Score.Name = "Score";
-            this.Score.Width = 125;
             // 
             // ButtonForGeneratingLeaderboard
             // 
@@ -120,29 +101,85 @@ namespace LogRegPage
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(661, 81);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 17);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Grade Lable";
+            // 
+            // UserName
+            // 
+            this.UserName.DataPropertyName = "UserName";
+            this.UserName.HeaderText = "Name";
+            this.UserName.MinimumWidth = 6;
+            this.UserName.Name = "UserName";
+            this.UserName.Width = 125;
+            // 
+            // Grade
+            // 
+            this.Grade.DataPropertyName = "Grade";
+            this.Grade.HeaderText = "Grade";
+            this.Grade.MinimumWidth = 6;
+            this.Grade.Name = "Grade";
+            this.Grade.Width = 125;
+            // 
+            // Test
+            // 
+            this.Test.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Test.DataPropertyName = "Test";
+            this.Test.HeaderText = "Test";
+            this.Test.MinimumWidth = 6;
+            this.Test.Name = "Test";
+            this.Test.Width = 125;
+            // 
+            // ScoreGameOne
+            // 
+            this.ScoreGameOne.DataPropertyName = "ScoreGameOne";
+            this.ScoreGameOne.HeaderText = "ScoreGameOne";
+            this.ScoreGameOne.MinimumWidth = 6;
+            this.ScoreGameOne.Name = "ScoreGameOne";
+            this.ScoreGameOne.Width = 125;
+            // 
+            // ScoreGameTwo
+            // 
+            this.ScoreGameTwo.DataPropertyName = "ScoreGameTwo";
+            this.ScoreGameTwo.HeaderText = "ScoreGameTwo";
+            this.ScoreGameTwo.MinimumWidth = 6;
+            this.ScoreGameTwo.Name = "ScoreGameTwo";
+            this.ScoreGameTwo.Width = 125;
+            // 
             // Leaderboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.GradeSelector);
             this.Controls.Add(this.ButtonForGeneratingLeaderboard);
             this.Controls.Add(this.NGSdataGV);
             this.Name = "Leaderboard";
             this.Text = "Leaderboard";
+            this.Load += new System.EventHandler(this.Leaderboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.NGSdataGV)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.DataGridView NGSdataGV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Grade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Score;
         private System.Windows.Forms.Button ButtonForGeneratingLeaderboard;
         private System.Windows.Forms.ComboBox GradeSelector;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Grade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Test;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ScoreGameOne;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ScoreGameTwo;
     }
 }

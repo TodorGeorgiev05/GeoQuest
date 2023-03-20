@@ -14,6 +14,8 @@ namespace LogRegPage.Utils
         // TODO: is good to be singelton
         private static GeoQuestContext DB = new GeoQuestContext();
         public static UserService UserService = new UserService(new UserRepository(DB));
+        public static ScoreService ScoreService = new ScoreService(new ScoreRepository(DB));
         public static User CurrentUser;
+        public static Score CurrentScore;
     }
 }

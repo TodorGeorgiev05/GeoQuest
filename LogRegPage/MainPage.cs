@@ -37,5 +37,9 @@ namespace LogRegPage
             Leaderboard leaderboard = new Leaderboard();
             leaderboard.Show();
         }
+
+        private void MainPage_Load(object sender, EventArgs e)
+        {
+                    }
     }
 }

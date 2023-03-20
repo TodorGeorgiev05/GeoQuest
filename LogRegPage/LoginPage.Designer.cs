@@ -41,7 +41,7 @@ namespace LogRegPage
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(265, 182);
+            this.label1.Location = new System.Drawing.Point(246, 183);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 17);
             this.label1.TabIndex = 0;
@@ -50,7 +50,7 @@ namespace LogRegPage
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(283, 279);
+            this.linkLabel1.Location = new System.Drawing.Point(264, 280);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(295, 17);
             this.linkLabel1.TabIndex = 1;
@@ -61,7 +61,7 @@ namespace LogRegPage
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(265, 112);
+            this.label2.Location = new System.Drawing.Point(246, 113);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 17);
             this.label2.TabIndex = 2;
@@ -69,21 +69,21 @@ namespace LogRegPage
             // 
             // Password
             // 
-            this.Password.Location = new System.Drawing.Point(435, 177);
+            this.Password.Location = new System.Drawing.Point(416, 178);
             this.Password.Name = "Password";
             this.Password.Size = new System.Drawing.Size(154, 22);
             this.Password.TabIndex = 3;
             // 
             // Username
             // 
-            this.Username.Location = new System.Drawing.Point(435, 107);
+            this.Username.Location = new System.Drawing.Point(416, 108);
             this.Username.Name = "Username";
             this.Username.Size = new System.Drawing.Size(154, 22);
             this.Username.TabIndex = 4;
             // 
             // LoginButton
             // 
-            this.LoginButton.Location = new System.Drawing.Point(514, 235);
+            this.LoginButton.Location = new System.Drawing.Point(495, 236);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(75, 23);
             this.LoginButton.TabIndex = 5;
@@ -93,7 +93,7 @@ namespace LogRegPage
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(266, 235);
+            this.button2.Location = new System.Drawing.Point(247, 236);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(107, 23);
             this.button2.TabIndex = 24;

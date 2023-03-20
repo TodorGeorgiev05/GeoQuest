@@ -16,6 +16,7 @@ namespace LogRegPage.Models
         }
 
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Score> Scores { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -41,7 +42,10 @@ namespace LogRegPage.Models
                 entity.Property(e => e.UserName).HasMaxLength(30);
 
                 entity.Property(e => e.UserType).HasMaxLength(30);
+                entity.Property(e => e.ScoreId).HasMaxLength(30);
             });
+            /*modelBuilder.Entity<Score>()
+                .HasOne(s => s.);*/
 
             OnModelCreatingPartial(modelBuilder);
         }

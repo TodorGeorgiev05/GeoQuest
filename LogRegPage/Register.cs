@@ -47,11 +47,15 @@ namespace LogRegPage
                 users.Password = Password.Text;
                 users.UserType = AccountType.SelectedItem.ToString();
                 users.Grade = gradeSelector.SelectedItem.ToString();
-
+                users.HighScore = new Score();
+                
                 db.Users.Add(users);
                 db.SaveChanges();
                 MessageBox.Show("Success!");
 
+                this.Hide();
+                LoginPage loginPage = new LoginPage();
+                loginPage.Show();
             }
             else
             {

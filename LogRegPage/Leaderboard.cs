@@ -20,9 +20,22 @@ namespace LogRegPage
             InitializeComponent();
             _geoQuestContext = new GeoQuestContext();
             // to initialize from stating point 10 of the peoples with best scores, without matter of the grade
-            var firstTen = _geoQuestContext.Users.OrderByDescending(t => t.Id).Take(10);
+            List<LeaderboardDTO> leaderboardDTOs =
+                _geoQuestContext.Users
+                .Select(leaderboard => new LeaderboardDTO
+                {
+                    UserName = leaderboard.UserName,
+                    Grade = leaderboard.Grade,
+                    ScoreGameOne = leaderboard.HighScore.ScoreGameOne,
+                    ScoreGameTwo = leaderboard.HighScore.ScoreGameTwo,
+                    Test = 1
+                })
+                .Take(10)
+                .ToList();
+
             NGSdataGV.AutoGenerateColumns = false;
-            NGSdataGV.DataSource = firstTen.ToList();
+            leaderboardDTOs[0].ScoreGameTwo = 500;
+            NGSdataGV.DataSource = leaderboardDTOs;
         }
 
         private void dataGridView1_CellContentClick(object er, DataGridViewCellEventArgs e)
@@ -42,7 +55,7 @@ namespace LogRegPage
             // to show 10 peoples with matter of grade, and overwrite auto generated information
             var selectedGrade = GradeSelector.SelectedItem.ToString();
 
-            NGSdataGV.DataSource = _geoQuestContext.Users.OrderByDescending(t => t.Id)
+            NGSdataGV.DataSource = _geoQuestContext.Users.OrderByDescending(t => t.HighScore)
                 .Where(u=>u.Grade == selectedGrade)
                 .Take(10)
                 .ToList();
@@ -64,6 +77,11 @@ namespace LogRegPage
             this.Hide();
             MainPage mainMenu = new MainPage();
             mainMenu.Show();
+        }
+
+        private void Leaderboard_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

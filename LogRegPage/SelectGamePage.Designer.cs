@@ -36,7 +36,6 @@ namespace LogRegPage
             this.MainMenu = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.Update = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // FlagGame
@@ -44,20 +43,22 @@ namespace LogRegPage
             this.FlagGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.8F);
             this.FlagGame.Location = new System.Drawing.Point(82, 112);
             this.FlagGame.Name = "FlagGame";
-            this.FlagGame.Size = new System.Drawing.Size(128, 37);
+            this.FlagGame.Size = new System.Drawing.Size(131, 37);
             this.FlagGame.TabIndex = 0;
             this.FlagGame.Text = "Flag game";
             this.FlagGame.UseVisualStyleBackColor = true;
+            this.FlagGame.Click += new System.EventHandler(this.FlagGame_Click);
             // 
             // SecondGame
             // 
             this.SecondGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.8F);
             this.SecondGame.Location = new System.Drawing.Point(82, 188);
             this.SecondGame.Name = "SecondGame";
-            this.SecondGame.Size = new System.Drawing.Size(128, 37);
+            this.SecondGame.Size = new System.Drawing.Size(131, 37);
             this.SecondGame.TabIndex = 1;
-            this.SecondGame.Text = "Second Game";
+            this.SecondGame.Text = "Map game";
             this.SecondGame.UseVisualStyleBackColor = true;
+            this.SecondGame.Click += new System.EventHandler(this.SecondGame_Click);
             // 
             // UpdateAcc
             // 
@@ -84,7 +85,7 @@ namespace LogRegPage
             // MainMenu
             // 
             this.MainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8F);
-            this.MainMenu.Location = new System.Drawing.Point(320, 293);
+            this.MainMenu.Location = new System.Drawing.Point(315, 291);
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(159, 56);
             this.MainMenu.TabIndex = 4;
@@ -110,22 +111,11 @@ namespace LogRegPage
             this.label2.TabIndex = 6;
             this.label2.Text = "Games";
             // 
-            // Update
-            // 
-            this.Update.Location = new System.Drawing.Point(347, 125);
-            this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(75, 23);
-            this.Update.TabIndex = 7;
-            this.Update.Text = "Update";
-            this.Update.UseVisualStyleBackColor = true;
-            this.Update.Click += new System.EventHandler(this.Update_Click);
-            // 
             // SelectGamePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Update);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.MainMenu);
@@ -148,6 +138,5 @@ namespace LogRegPage
         private System.Windows.Forms.Button MainMenu;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button Update;
     }
 }
