@@ -38,9 +38,10 @@ namespace LogRegPage
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(333, 207);
+            this.button2.Location = new System.Drawing.Point(250, 168);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(116, 48);
+            this.button2.Size = new System.Drawing.Size(87, 39);
             this.button2.TabIndex = 3;
             this.button2.Text = "Register";
             this.button2.UseVisualStyleBackColor = true;
@@ -48,9 +49,10 @@ namespace LogRegPage
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(333, 131);
+            this.button1.Location = new System.Drawing.Point(250, 106);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 48);
+            this.button1.Size = new System.Drawing.Size(87, 39);
             this.button1.TabIndex = 5;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = true;
@@ -58,9 +60,10 @@ namespace LogRegPage
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(333, 286);
+            this.button3.Location = new System.Drawing.Point(250, 232);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(116, 48);
+            this.button3.Size = new System.Drawing.Size(87, 39);
             this.button3.TabIndex = 6;
             this.button3.Text = "Leaderboard";
             this.button3.UseVisualStyleBackColor = true;
@@ -68,23 +71,27 @@ namespace LogRegPage
             // 
             // pictureBox1
             // 
-            this.pictureBox1.ImageLocation = "C:\\Users\\Acer\\Downloads\\GeoQuest.png";
-            this.pictureBox1.Location = new System.Drawing.Point(231, 26);
+            this.pictureBox1.Image = global::LogRegPage.Properties.Resources.GeoQuest;
+            this.pictureBox1.ImageLocation = "";
+            this.pictureBox1.Location = new System.Drawing.Point(184, 23);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(321, 80);
+            this.pictureBox1.Size = new System.Drawing.Size(239, 65);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
             // MainPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainPage";
             this.Text = "MainPage";
             this.Load += new System.EventHandler(this.MainPage_Load);
