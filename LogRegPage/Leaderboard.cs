@@ -34,7 +34,7 @@ namespace LogRegPage
                 .ToList();
 
             NGSdataGV.AutoGenerateColumns = false;
-            leaderboardDTOs[0].ScoreGameTwo = 500;
+            // leaderboardDTOs[0].ScoreGameTwo = 500;
             NGSdataGV.DataSource = leaderboardDTOs;
         }
 

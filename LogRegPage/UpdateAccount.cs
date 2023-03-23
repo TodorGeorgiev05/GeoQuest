@@ -17,13 +17,18 @@ namespace LogRegPage
 {
     public partial class UpdateAccount : Form
     {
+        private GeoQuestContext _geoQuestContext;
+
         public UpdateAccount()
         {
             InitializeComponent();
-            // goal is to get id from login and use that login id to can update only the user with that id
-/*                       var firstTen = .Users.OrderByDescending(t => t.Id).Take(10);
+            _geoQuestContext = new GeoQuestContext();
             UpdateAccDGV.AutoGenerateColumns = false;
-            UpdateAccDGV.DataSource = firstTen.ToList();*/
+            UpdateAccDGV.DataSource = Session.CurrentUser;
+            // goal is to get id from login and use that login id to can update only the user with that id
+            /*                       var firstTen = .Users.OrderByDescending(t => t.Id).Take(10);
+                        UpdateAccDGV.AutoGenerateColumns = false;
+                        UpdateAccDGV.DataSource = firstTen.ToList();*/
         }
 
         private void UpdateBtn_Click(object sender, EventArgs e)
@@ -34,6 +39,13 @@ namespace LogRegPage
         private void UpdateAccount_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void MainMenu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainPage mainPage = new MainPage();
+            mainPage.Show();
         }
     }
 }

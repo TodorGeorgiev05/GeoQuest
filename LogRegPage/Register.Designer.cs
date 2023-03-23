@@ -32,11 +32,9 @@ namespace LogRegPage
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.Password = new System.Windows.Forms.TextBox();
             this.Username = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.createAcc = new System.Windows.Forms.LinkLabel();
-            this.AccountType = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.cnfPassword = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -55,31 +53,22 @@ namespace LogRegPage
             // 
             // Password
             // 
-            this.Password.Location = new System.Drawing.Point(482, 113);
+            this.Password.Location = new System.Drawing.Point(482, 145);
             this.Password.Name = "Password";
             this.Password.Size = new System.Drawing.Size(121, 22);
             this.Password.TabIndex = 16;
             // 
             // Username
             // 
-            this.Username.Location = new System.Drawing.Point(482, 60);
+            this.Username.Location = new System.Drawing.Point(482, 92);
             this.Username.Name = "Username";
             this.Username.Size = new System.Drawing.Size(121, 22);
             this.Username.TabIndex = 15;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(223, 256);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 17);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Account Type";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(223, 118);
+            this.label2.Location = new System.Drawing.Point(223, 150);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 17);
             this.label2.TabIndex = 13;
@@ -88,7 +77,7 @@ namespace LogRegPage
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(223, 60);
+            this.label1.Location = new System.Drawing.Point(223, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 17);
             this.label1.TabIndex = 12;
@@ -105,17 +94,6 @@ namespace LogRegPage
             this.createAcc.Text = "Back to Login page";
             this.createAcc.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.createAcc_LinkClicked);
             // 
-            // AccountType
-            // 
-            this.AccountType.FormattingEnabled = true;
-            this.AccountType.Items.AddRange(new object[] {
-            "Admin",
-            "User"});
-            this.AccountType.Location = new System.Drawing.Point(482, 249);
-            this.AccountType.Name = "AccountType";
-            this.AccountType.Size = new System.Drawing.Size(121, 24);
-            this.AccountType.TabIndex = 10;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(528, 321);
@@ -128,7 +106,7 @@ namespace LogRegPage
             // 
             // cnfPassword
             // 
-            this.cnfPassword.Location = new System.Drawing.Point(482, 164);
+            this.cnfPassword.Location = new System.Drawing.Point(482, 196);
             this.cnfPassword.Name = "cnfPassword";
             this.cnfPassword.Size = new System.Drawing.Size(121, 22);
             this.cnfPassword.TabIndex = 19;
@@ -137,7 +115,7 @@ namespace LogRegPage
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(223, 169);
+            this.label4.Location = new System.Drawing.Point(223, 201);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(121, 17);
             this.label4.TabIndex = 18;
@@ -146,7 +124,7 @@ namespace LogRegPage
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(223, 211);
+            this.label5.Location = new System.Drawing.Point(223, 243);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 17);
             this.label5.TabIndex = 21;
@@ -182,7 +160,7 @@ namespace LogRegPage
             "10",
             "11",
             "12"});
-            this.gradeSelector.Location = new System.Drawing.Point(482, 208);
+            this.gradeSelector.Location = new System.Drawing.Point(482, 240);
             this.gradeSelector.Name = "gradeSelector";
             this.gradeSelector.Size = new System.Drawing.Size(121, 24);
             this.gradeSelector.TabIndex = 22;
@@ -211,11 +189,9 @@ namespace LogRegPage
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.Password);
             this.Controls.Add(this.Username);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.createAcc);
-            this.Controls.Add(this.AccountType);
             this.Controls.Add(this.button1);
             this.Name = "Register";
             this.Text = "Register";
@@ -230,11 +206,9 @@ namespace LogRegPage
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.TextBox Password;
         private System.Windows.Forms.TextBox Username;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel createAcc;
-        private System.Windows.Forms.ComboBox AccountType;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox cnfPassword;
         private System.Windows.Forms.Label label4;

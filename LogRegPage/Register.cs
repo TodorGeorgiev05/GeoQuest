@@ -45,7 +45,6 @@ namespace LogRegPage
             {
                 users.UserName = Username.Text;
                 users.Password = Password.Text;
-                users.UserType = AccountType.SelectedItem.ToString();
                 users.Grade = gradeSelector.SelectedItem.ToString();
                 users.HighScore = new Score();
                 

@@ -79,6 +79,7 @@ namespace LogRegPage
                             SoundPlayer simpleSound = new SoundPlayer(@"Assets/Sounds/pin.wav");
                             simpleSound.Play();
                             countries.Remove(randomCountry);
+                            MessageBox.Show($"Score{score}");
                             c.Visible = false;
 
                             // Remove all previously drawn borders
@@ -88,7 +89,6 @@ namespace LogRegPage
                             if (countries.Count == 0)
                             {
                                 MessageBox.Show($"You won! Score: {score}");
-
                                 Session.ScoreService.UpdateFlagGame(score, Session.CurrentUser.Id);
                                 return;
                             }

@@ -36,7 +36,6 @@ namespace LogRegPage
             this.label1 = new System.Windows.Forms.Label();
             this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Test = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ScoreGameOne = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ScoreGameTwo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.NGSdataGV)).BeginInit();
@@ -48,7 +47,6 @@ namespace LogRegPage
             this.NGSdataGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.UserName,
             this.Grade,
-            this.Test,
             this.ScoreGameOne,
             this.ScoreGameTwo});
             this.NGSdataGV.Location = new System.Drawing.Point(43, 12);
@@ -126,15 +124,6 @@ namespace LogRegPage
             this.Grade.Name = "Grade";
             this.Grade.Width = 125;
             // 
-            // Test
-            // 
-            this.Test.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Test.DataPropertyName = "Test";
-            this.Test.HeaderText = "Test";
-            this.Test.MinimumWidth = 6;
-            this.Test.Name = "Test";
-            this.Test.Width = 125;
-            // 
             // ScoreGameOne
             // 
             this.ScoreGameOne.DataPropertyName = "ScoreGameOne";
@@ -178,7 +167,6 @@ namespace LogRegPage
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Grade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Test;
         private System.Windows.Forms.DataGridViewTextBoxColumn ScoreGameOne;
         private System.Windows.Forms.DataGridViewTextBoxColumn ScoreGameTwo;
     }

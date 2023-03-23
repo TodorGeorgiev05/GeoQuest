@@ -37,6 +37,10 @@ namespace LogRegPage
             this.Username = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.UpdateAccDGV = new System.Windows.Forms.DataGridView();
+            this.MainMenu = new System.Windows.Forms.Button();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pass = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.UpdateAccDGV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,6 +119,10 @@ namespace LogRegPage
             // UpdateAccDGV
             // 
             this.UpdateAccDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.UpdateAccDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Name,
+            this.Pass,
+            this.Grade});
             this.UpdateAccDGV.Location = new System.Drawing.Point(399, 104);
             this.UpdateAccDGV.Name = "UpdateAccDGV";
             this.UpdateAccDGV.RowHeadersWidth = 51;
@@ -122,11 +130,46 @@ namespace LogRegPage
             this.UpdateAccDGV.Size = new System.Drawing.Size(344, 206);
             this.UpdateAccDGV.TabIndex = 7;
             // 
+            // MainMenu
+            // 
+            this.MainMenu.Location = new System.Drawing.Point(134, 287);
+            this.MainMenu.Name = "MainMenu";
+            this.MainMenu.Size = new System.Drawing.Size(102, 23);
+            this.MainMenu.TabIndex = 8;
+            this.MainMenu.Text = "Main menu";
+            this.MainMenu.UseVisualStyleBackColor = true;
+            this.MainMenu.Click += new System.EventHandler(this.MainMenu_Click);
+            // 
+            // Name
+            // 
+            this.Name.DataPropertyName = "Username";
+            this.Name.HeaderText = "Name";
+            this.Name.MinimumWidth = 6;
+            this.Name.Name = "Name";
+            this.Name.Width = 125;
+            // 
+            // Pass
+            // 
+            this.Pass.DataPropertyName = "Password";
+            this.Pass.HeaderText = "Password";
+            this.Pass.MinimumWidth = 6;
+            this.Pass.Name = "Pass";
+            this.Pass.Width = 125;
+            // 
+            // Grade
+            // 
+            this.Grade.DataPropertyName = "GradeSelect";
+            this.Grade.HeaderText = "Grade";
+            this.Grade.MinimumWidth = 6;
+            this.Grade.Name = "Grade";
+            this.Grade.Width = 125;
+            // 
             // UpdateAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.MainMenu);
             this.Controls.Add(this.UpdateAccDGV);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Username);
@@ -135,7 +178,7 @@ namespace LogRegPage
             this.Controls.Add(this.label1);
             this.Controls.Add(this.GradeSelect);
             this.Controls.Add(this.UpdateBtn);
-            this.Name = "UpdateAccount";
+            // this.Name = "UpdateAccount";
             this.Text = "Update Account";
             this.Load += new System.EventHandler(this.UpdateAccount_Load);
             ((System.ComponentModel.ISupportInitialize)(this.UpdateAccDGV)).EndInit();
@@ -154,5 +197,9 @@ namespace LogRegPage
         private System.Windows.Forms.TextBox Username;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView UpdateAccDGV;
+        private System.Windows.Forms.Button MainMenu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pass;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Grade;
     }
 }

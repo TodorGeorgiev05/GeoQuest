@@ -47,7 +47,7 @@ namespace LogRegPage
             {
                 
                 Session.ScoreService.Delete(new Score(){User = Session.CurrentUser });
-               //  Session.UserService.Delete(Session.CurrentUser);
+                // Session.UserService.Delete(Session.CurrentUser);
 
                 // ScoreService.Delete(Session.CurrentUser.ScoreId);
                 this.Hide();
