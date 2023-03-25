@@ -53,7 +53,7 @@ namespace LogRegPage
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void MainPage_Click(object sender, EventArgs e)
         {
             this.Hide();
             MainPage mainMenu = new MainPage();

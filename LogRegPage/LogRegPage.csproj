@@ -182,7 +182,12 @@
     <Compile Include="Migrations\20230320204327_database.designer.cs">
       <DependentUpon>20230320204327_database.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20230325081834_admin.cs" />
+    <Compile Include="Migrations\20230325081834_admin.designer.cs">
+      <DependentUpon>20230325081834_admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\GeoQuestContextModelSnapshot.cs" />
+    <Compile Include="Models\DbInitializer.cs" />
     <Compile Include="WordGame.cs">
       <SubType>Form</SubType>
     </Compile>
