@@ -1,0 +1,5 @@
+C:\Users\Acer\Documents\GitHub\GeoQuest1\TestProject1\obj\Debug\net48\LogRegPage.Tests.csproj.AssemblyReference.cache
+C:\Users\Acer\Documents\GitHub\GeoQuest1\TestProject1\obj\Debug\net48\LogRegPage.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Acer\Documents\GitHub\GeoQuest1\TestProject1\obj\Debug\net48\LogRegPage.Tests.AssemblyInfoInputs.cache
+C:\Users\Acer\Documents\GitHub\GeoQuest1\TestProject1\obj\Debug\net48\LogRegPage.Tests.AssemblyInfo.cs
+C:\Users\Acer\Documents\GitHub\GeoQuest1\TestProject1\obj\Debug\net48\LogRegPage.Tests.csproj.CoreCompileInputs.cache
