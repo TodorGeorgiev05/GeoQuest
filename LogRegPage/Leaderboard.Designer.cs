@@ -30,14 +30,14 @@ namespace LogRegPage
         private void InitializeComponent()
         {
             this.NGSdataGV = new System.Windows.Forms.DataGridView();
-            this.ButtonForGeneratingLeaderboard = new System.Windows.Forms.Button();
-            this.GradeSelector = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ScoreGameOne = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ScoreGameTwo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ButtonForGeneratingLeaderboard = new System.Windows.Forms.Button();
+            this.GradeSelector = new System.Windows.Forms.ComboBox();
+            this.MainPageButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.NGSdataGV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,57 +56,6 @@ namespace LogRegPage
             this.NGSdataGV.Size = new System.Drawing.Size(570, 426);
             this.NGSdataGV.TabIndex = 2;
             this.NGSdataGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NGSdataGV_CellContentClick);
-            // 
-            // ButtonForGeneratingLeaderboard
-            // 
-            this.ButtonForGeneratingLeaderboard.Location = new System.Drawing.Point(661, 245);
-            this.ButtonForGeneratingLeaderboard.Name = "ButtonForGeneratingLeaderboard";
-            this.ButtonForGeneratingLeaderboard.Size = new System.Drawing.Size(96, 23);
-            this.ButtonForGeneratingLeaderboard.TabIndex = 3;
-            this.ButtonForGeneratingLeaderboard.Text = "Select";
-            this.ButtonForGeneratingLeaderboard.UseVisualStyleBackColor = true;
-            this.ButtonForGeneratingLeaderboard.Click += new System.EventHandler(this.ButtonForGeneratingLeaderboard_Click);
-            // 
-            // GradeSelector
-            // 
-            this.GradeSelector.FormattingEnabled = true;
-            this.GradeSelector.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12"});
-            this.GradeSelector.Location = new System.Drawing.Point(648, 123);
-            this.GradeSelector.Name = "GradeSelector";
-            this.GradeSelector.Size = new System.Drawing.Size(121, 24);
-            this.GradeSelector.TabIndex = 4;
-            this.GradeSelector.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(661, 291);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Main Page";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(661, 81);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 17);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Grade Lable";
             // 
             // UserName
             // 
@@ -140,13 +89,64 @@ namespace LogRegPage
             this.ScoreGameTwo.Name = "ScoreGameTwo";
             this.ScoreGameTwo.Width = 125;
             // 
+            // ButtonForGeneratingLeaderboard
+            // 
+            this.ButtonForGeneratingLeaderboard.Location = new System.Drawing.Point(661, 245);
+            this.ButtonForGeneratingLeaderboard.Name = "ButtonForGeneratingLeaderboard";
+            this.ButtonForGeneratingLeaderboard.Size = new System.Drawing.Size(96, 23);
+            this.ButtonForGeneratingLeaderboard.TabIndex = 3;
+            this.ButtonForGeneratingLeaderboard.Text = "Select";
+            this.ButtonForGeneratingLeaderboard.UseVisualStyleBackColor = true;
+            this.ButtonForGeneratingLeaderboard.Click += new System.EventHandler(this.ButtonForGeneratingLeaderboard_Click);
+            // 
+            // GradeSelector
+            // 
+            this.GradeSelector.FormattingEnabled = true;
+            this.GradeSelector.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.GradeSelector.Location = new System.Drawing.Point(648, 123);
+            this.GradeSelector.Name = "GradeSelector";
+            this.GradeSelector.Size = new System.Drawing.Size(121, 24);
+            this.GradeSelector.TabIndex = 4;
+            this.GradeSelector.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // MainPageButton
+            // 
+            this.MainPageButton.Location = new System.Drawing.Point(661, 291);
+            this.MainPageButton.Name = "MainPageButton";
+            this.MainPageButton.Size = new System.Drawing.Size(96, 23);
+            this.MainPageButton.TabIndex = 5;
+            this.MainPageButton.Text = "Main Page";
+            this.MainPageButton.UseVisualStyleBackColor = true;
+            this.MainPageButton.Click += new System.EventHandler(this.MainPageButton_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(661, 81);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 17);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Grade Lable";
+            // 
             // Leaderboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.MainPageButton);
             this.Controls.Add(this.GradeSelector);
             this.Controls.Add(this.ButtonForGeneratingLeaderboard);
             this.Controls.Add(this.NGSdataGV);
@@ -163,7 +163,7 @@ namespace LogRegPage
         private System.Windows.Forms.DataGridView NGSdataGV;
         private System.Windows.Forms.Button ButtonForGeneratingLeaderboard;
         private System.Windows.Forms.ComboBox GradeSelector;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button MainPageButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Grade;

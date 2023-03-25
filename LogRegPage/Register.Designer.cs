@@ -35,12 +35,12 @@ namespace LogRegPage
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.createAcc = new System.Windows.Forms.LinkLabel();
-            this.button1 = new System.Windows.Forms.Button();
             this.cnfPassword = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.gradeSelector = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.registerBnt = new System.Windows.Forms.Button();
+            this.MainPage = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // linkLabel1
@@ -93,16 +93,6 @@ namespace LogRegPage
             this.createAcc.TabStop = true;
             this.createAcc.Text = "Back to Login page";
             this.createAcc.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.createAcc_LinkClicked);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(528, 321);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Register";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // cnfPassword
             // 
@@ -166,22 +156,33 @@ namespace LogRegPage
             this.gradeSelector.TabIndex = 22;
             this.gradeSelector.SelectedIndexChanged += new System.EventHandler(this.gradeSelector_SelectedIndexChanged);
             // 
-            // button2
+            // registerBnt
             // 
-            this.button2.Location = new System.Drawing.Point(226, 321);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 23);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Main menu";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.registerBnt.Location = new System.Drawing.Point(532, 321);
+            this.registerBnt.Name = "registerBnt";
+            this.registerBnt.Size = new System.Drawing.Size(75, 23);
+            this.registerBnt.TabIndex = 24;
+            this.registerBnt.Text = "Register";
+            this.registerBnt.UseVisualStyleBackColor = true;
+            this.registerBnt.Click += new System.EventHandler(this.registerBnt_Click);
+            // 
+            // MainPage
+            // 
+            this.MainPage.Location = new System.Drawing.Point(226, 321);
+            this.MainPage.Name = "MainPage";
+            this.MainPage.Size = new System.Drawing.Size(91, 23);
+            this.MainPage.TabIndex = 25;
+            this.MainPage.Text = "Main menu";
+            this.MainPage.UseVisualStyleBackColor = true;
+            this.MainPage.Click += new System.EventHandler(this.MainPage_Click);
             // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.MainPage);
+            this.Controls.Add(this.registerBnt);
             this.Controls.Add(this.gradeSelector);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cnfPassword);
@@ -192,7 +193,6 @@ namespace LogRegPage
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.createAcc);
-            this.Controls.Add(this.button1);
             this.Name = "Register";
             this.Text = "Register";
             this.Load += new System.EventHandler(this.Register_Load);
@@ -209,11 +209,11 @@ namespace LogRegPage
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel createAcc;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox cnfPassword;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox gradeSelector;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button registerBnt;
+        private System.Windows.Forms.Button MainPage;
     }
 }

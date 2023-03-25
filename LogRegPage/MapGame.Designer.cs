@@ -80,6 +80,9 @@ namespace LogRegPage
             this.pictureBox49 = new System.Windows.Forms.PictureBox();
             this.pictureBox50 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.restartButton = new System.Windows.Forms.Button();
+            this.scoreLabel = new System.Windows.Forms.Label();
+            this.MainPageButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -645,12 +648,43 @@ namespace LogRegPage
             this.label1.Text = "Click on:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // Form2
+            // restartButton
+            // 
+            this.restartButton.Location = new System.Drawing.Point(128, 28);
+            this.restartButton.Name = "restartButton";
+            this.restartButton.Size = new System.Drawing.Size(102, 23);
+            this.restartButton.TabIndex = 51;
+            this.restartButton.Text = "Restart";
+            this.restartButton.UseVisualStyleBackColor = true;
+            // 
+            // scoreLabel
+            // 
+            this.scoreLabel.AutoSize = true;
+            this.scoreLabel.Location = new System.Drawing.Point(858, 33);
+            this.scoreLabel.Name = "scoreLabel";
+            this.scoreLabel.Size = new System.Drawing.Size(45, 17);
+            this.scoreLabel.TabIndex = 52;
+            this.scoreLabel.Text = "Score";
+            // 
+            // MainPageButton
+            // 
+            this.MainPageButton.Location = new System.Drawing.Point(253, 28);
+            this.MainPageButton.Name = "MainPageButton";
+            this.MainPageButton.Size = new System.Drawing.Size(96, 23);
+            this.MainPageButton.TabIndex = 53;
+            this.MainPageButton.Text = "Main Page";
+            this.MainPageButton.UseVisualStyleBackColor = true;
+            this.MainPageButton.Click += new System.EventHandler(this.MainPageButton_Click);
+            // 
+            // MapGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.ClientSize = new System.Drawing.Size(1152, 635);
+            this.Controls.Add(this.MainPageButton);
+            this.Controls.Add(this.scoreLabel);
+            this.Controls.Add(this.restartButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox41);
             this.Controls.Add(this.pictureBox42);
@@ -703,7 +737,7 @@ namespace LogRegPage
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Form2";
+            this.Name = "MapGame";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -814,5 +848,8 @@ namespace LogRegPage
         private System.Windows.Forms.PictureBox pictureBox49;
         private System.Windows.Forms.PictureBox pictureBox50;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button restartButton;
+        private System.Windows.Forms.Label scoreLabel;
+        private System.Windows.Forms.Button MainPageButton;
     }
 }

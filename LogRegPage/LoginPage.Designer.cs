@@ -35,7 +35,7 @@ namespace LogRegPage
             this.Password = new System.Windows.Forms.TextBox();
             this.Username = new System.Windows.Forms.TextBox();
             this.LoginButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.MainPage = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -91,22 +91,22 @@ namespace LogRegPage
             this.LoginButton.UseVisualStyleBackColor = true;
             this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
-            // button2
+            // MainPage
             // 
-            this.button2.Location = new System.Drawing.Point(247, 236);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 23);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Main menu";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.MainPage.Location = new System.Drawing.Point(258, 236);
+            this.MainPage.Name = "MainPage";
+            this.MainPage.Size = new System.Drawing.Size(104, 23);
+            this.MainPage.TabIndex = 6;
+            this.MainPage.Text = "MainPage";
+            this.MainPage.UseVisualStyleBackColor = true;
+            this.MainPage.Click += new System.EventHandler(this.MainPage_Click);
             // 
             // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.MainPage);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.Username);
             this.Controls.Add(this.Password);
@@ -128,6 +128,6 @@ namespace LogRegPage
         private System.Windows.Forms.TextBox Password;
         private System.Windows.Forms.TextBox Username;
         private System.Windows.Forms.Button LoginButton;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button MainPage;
     }
 }

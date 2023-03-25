@@ -75,11 +75,18 @@ namespace LogRegPage
                     {
                         if (c.Name == randomCode)
                         {
+                            if (guessCount == 0)
+                            {
+                                score += 5;
+                            }
+                            if (guessCount == 1)
+                            {
+                                score += 0;
+                            }
                             guessCount = 0;
                             SoundPlayer simpleSound = new SoundPlayer(@"Assets/Sounds/pin.wav");
                             simpleSound.Play();
                             countries.Remove(randomCountry);
-                            MessageBox.Show($"Score{score}");
                             c.Visible = false;
 
                             // Remove all previously drawn borders
@@ -89,6 +96,7 @@ namespace LogRegPage
                             if (countries.Count == 0)
                             {
                                 MessageBox.Show($"You won! Score: {score}");
+
                                 Session.ScoreService.UpdateFlagGame(score, Session.CurrentUser.Id);
                                 return;
                             }
@@ -97,28 +105,20 @@ namespace LogRegPage
                         else
                         {
                             guessCount++;
-                        }
-                        switch (guessCount)
-                        {
-                            case 0:
-                                score += 5;
-                                break;
-                            case 1:
-                                score += 3;
-                                break;
-                            case 2:
+                            // Make the correct picturebox have a green border of 25px using the DrawRectangle method
+                            Graphics g = this.CreateGraphics();
+                            PictureBox correctPb = (PictureBox)this.Controls.Find(randomCode, true)[0];
+                            g.DrawRectangle(new Pen(Color.Green, 10), correctPb.Location.X, correctPb.Location.Y, correctPb.Width, correctPb.Height);
+                            if (guessCount == 1)
+                            {
                                 score += 1;
-                                break;
-                            case 3:
-                                guessCount = 0;
-                                // Make the correct picturebox have a green border of 25px using the DrawRectangle method
-                                Graphics g = this.CreateGraphics();
-                                PictureBox correctPb = (PictureBox)this.Controls.Find(randomCode, true)[0];
-                                g.DrawRectangle(new Pen(Color.Green, 10), correctPb.Location.X, correctPb.Location.Y, correctPb.Width, correctPb.Height);
-                                break;
-                            default:
-                                break;
+                            }
+                            if (guessCount >= 2)
+                            {
+                                score += 0;
+                            }
                         }
+                        scoreLabel.Text = $"Score: {score}";
                     };
                 }
             }
@@ -132,6 +132,20 @@ namespace LogRegPage
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void restartButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FlagGame flagGame = new FlagGame();
+            flagGame.Show();
+        }
+
+        private void MainPageButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainPage mainMenu = new MainPage();
+            mainMenu.Show();
         }
     }
 }
