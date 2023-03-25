@@ -51,6 +51,7 @@ namespace LogRegPage.Models
                 /*.WithOne(y => y.User);*/
 
             OnModelCreatingPartial(modelBuilder);
+            new DbInitializer(modelBuilder).Seed();
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);

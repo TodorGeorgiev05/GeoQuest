@@ -100,5 +100,37 @@ namespace LogRegPage
             MainPage mainPage = new MainPage();
             mainPage.Show();
         }
+
+        private void registerBnt_Click(object sender, EventArgs e)
+        {
+            User users = new User();
+
+            if (Password.Text == cnfPassword.Text && !IsEmpty())
+            {
+                users.UserName = Username.Text;
+                users.Password = Password.Text;
+                users.Grade = gradeSelector.SelectedItem.ToString();
+                users.HighScore = new Score();
+
+                db.Users.Add(users);
+                db.SaveChanges();
+                MessageBox.Show("Success!");
+
+                this.Hide();
+                LoginPage loginPage = new LoginPage();
+                loginPage.Show();
+            }
+            else
+            {
+                MessageBox.Show("Invalid password or empty field!");
+            }
+        }
+
+        private void MainPage_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainPage mainMenu = new MainPage();
+            mainMenu.Show();
+        }
     }
 }
