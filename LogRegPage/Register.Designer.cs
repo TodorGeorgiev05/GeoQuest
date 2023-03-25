@@ -154,7 +154,6 @@ namespace LogRegPage
             this.gradeSelector.Name = "gradeSelector";
             this.gradeSelector.Size = new System.Drawing.Size(121, 24);
             this.gradeSelector.TabIndex = 22;
-            this.gradeSelector.SelectedIndexChanged += new System.EventHandler(this.gradeSelector_SelectedIndexChanged);
             // 
             // registerBnt
             // 
@@ -195,7 +194,6 @@ namespace LogRegPage
             this.Controls.Add(this.createAcc);
             this.Name = "Register";
             this.Text = "Register";
-            this.Load += new System.EventHandler(this.Register_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

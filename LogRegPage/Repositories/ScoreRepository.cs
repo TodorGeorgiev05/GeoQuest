@@ -31,5 +31,11 @@ namespace LogRegPage.Repositories
             _geoQuestContext.SaveChanges();
             return true;
         }
+
+        public void Add(Score score)
+        {
+            _geoQuestContext.Scores.Add(score);
+            _geoQuestContext.SaveChanges();
+        }
     }
 }

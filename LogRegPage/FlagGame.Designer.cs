@@ -650,17 +650,20 @@ namespace LogRegPage
             // 
             // restartButton
             // 
+            this.restartButton.BackColor = System.Drawing.Color.Black;
+            this.restartButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.restartButton.Location = new System.Drawing.Point(86, 26);
             this.restartButton.Name = "restartButton";
             this.restartButton.Size = new System.Drawing.Size(91, 23);
             this.restartButton.TabIndex = 52;
             this.restartButton.Text = "Restart";
-            this.restartButton.UseVisualStyleBackColor = true;
+            this.restartButton.UseVisualStyleBackColor = false;
             this.restartButton.Click += new System.EventHandler(this.restartButton_Click);
             // 
             // scoreLabel
             // 
             this.scoreLabel.AutoSize = true;
+            this.scoreLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.scoreLabel.Location = new System.Drawing.Point(553, 26);
             this.scoreLabel.Name = "scoreLabel";
             this.scoreLabel.Size = new System.Drawing.Size(45, 17);
@@ -669,12 +672,14 @@ namespace LogRegPage
             // 
             // MainPageButton
             // 
+            this.MainPageButton.BackColor = System.Drawing.Color.Black;
+            this.MainPageButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.MainPageButton.Location = new System.Drawing.Point(197, 26);
             this.MainPageButton.Name = "MainPageButton";
             this.MainPageButton.Size = new System.Drawing.Size(96, 23);
             this.MainPageButton.TabIndex = 54;
             this.MainPageButton.Text = "Main Page";
-            this.MainPageButton.UseVisualStyleBackColor = true;
+            this.MainPageButton.UseVisualStyleBackColor = false;
             this.MainPageButton.Click += new System.EventHandler(this.MainPageButton_Click);
             // 
             // FlagGame

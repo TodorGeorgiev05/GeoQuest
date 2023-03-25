@@ -84,15 +84,6 @@ namespace LogRegPage
 
         }
 
-        private void gradeSelector_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Register_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {

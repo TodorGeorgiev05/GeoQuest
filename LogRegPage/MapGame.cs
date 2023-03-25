@@ -9,11 +9,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LogRegPage.Models;
+using LogRegPage.Repositories;
+using LogRegPage.Servisies;
 
 namespace LogRegPage
 {
     public partial class MapGame : Form
     {
+        static GeoQuestContext db = new GeoQuestContext();
+        private static UserService _userService = new UserService(new UserRepository(db));
         public MapGame()
         {
             InitializeComponent();
@@ -22,7 +27,7 @@ namespace LogRegPage
         string randomCode = "";
         int score = 0;
         int guessCount = 0;
-        Dictionary<string, string> countries = new Dictionary<string, string>()
+       /* Dictionary<string, string> countries = new Dictionary<string, string>()
             {
                 {"Albania", "AL"}, {"Andorra", "AD"}, {"Austria", "AT"}, {"Azerbaijan", "AZ"}, {"Armenia", "AM"}, {"Belarus", "BY"},
                 {"Belgium", "BE"}, {"Bosnia and Herzegovina", "BA"}, {"Bulgaria", "BG"}, {"Croatia", "HR"}, {"Cyprus", "CY"},
@@ -34,7 +39,7 @@ namespace LogRegPage
                 {"Russia", "RU"}, {"San Marino", "SM"}, {"Serbia", "RS"}, {"Slovakia", "SK"}, {"Slovenia", "SI"}, {"Spain", "ES"},
                 {"Sweden", "SE"}, {"Switzerland", "CH"}, {"Türkiye", "TR"}, {"Ukraine", "UA"}, {"United Kingdom", "UK"},
                 {"Vatican City", "VA"}
-            };
+            };*/
 
         private void SetRandomCountry(Dictionary<string, string> countries)
         {
@@ -45,6 +50,7 @@ namespace LogRegPage
         }
         private void Form2_Load(object sender, EventArgs e)
         {
+            var countries = db.Countries.ToDictionary(c => c.Name, c => c.CountryCode);
 
             // Shuffle the dictionary
             countries = countries.OrderBy(x => Guid.NewGuid()).ToDictionary(item => item.Key, item => item.Value);

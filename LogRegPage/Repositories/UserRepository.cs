@@ -30,5 +30,15 @@ namespace LogRegPage.Repositories
             _geoQuestContext.SaveChanges();
             return true;
         }
+
+        public User Add(User user) 
+        {
+            if (_geoQuestContext == null) throw new ArgumentNullException(nameof(_geoQuestContext));
+
+            _geoQuestContext.Users.Add(user);
+            _geoQuestContext.SaveChanges();
+
+            return user; 
+        }
     }
 }

@@ -37,20 +37,8 @@ namespace LogRegPage
         {
             int score = 0;
             int guessCount = 0;
-            Dictionary<string, string> countries = new Dictionary<string, string>()
-            {
-                {"Albania", "AL"}, {"Andorra", "AD"}, {"Austria", "AT"}, {"Azerbaijan", "AZ"}, {"Armenia", "AM"}, {"Belarus", "BY"},
-                {"Belgium", "BE"}, {"Bosnia and Herzegovina", "BA"}, {"Bulgaria", "BG"}, {"Croatia", "HR"}, {"Cyprus", "CY"},
-                {"Czech Republic", "CZ"}, {"Denmark", "DK"}, {"Estonia", "EE"}, {"Finland", "FI"}, {"France", "FR"}, {"Germany", "DE"},
-                {"Georgia", "GE"}, {"Greece", "GR"}, {"Hungary", "HU"}, {"Iceland", "IS"}, {"Ireland", "IE"}, {"Italy", "IT"},
-                {"Kosovo", "XK"}, {"Latvia", "LV"}, {"Liechtenstein", "LI"}, {"Lithuania", "LT"}, {"Luxembourg", "LU"},
-                {"North Macedonia", "MK"}, {"Malta", "MT"}, {"Moldova", "MD"}, {"Monaco", "MC"}, {"Montenegro", "ME"},
-                {"The Netherlands", "NL"}, {"Norway", "NO"}, {"Poland", "PL"}, {"Portugal", "PT"}, {"Romania", "RO"},
-                {"Russia", "RU"}, {"San Marino", "SM"}, {"Serbia", "RS"}, {"Slovakia", "SK"}, {"Slovenia", "SI"}, {"Spain", "ES"},
-                {"Sweden", "SE"}, {"Switzerland", "CH"}, {"Türkiye", "TR"}, {"Ukraine", "UA"}, {"United Kingdom", "UK"},
-                {"Vatican City", "VA"}
-            };
-
+            var countries = db.Countries.ToDictionary(c => c.Name, c => c.CountryCode);
+            
             // Shuffle the dictionary
             countries = countries.OrderBy(x => Guid.NewGuid()).ToDictionary(item => item.Key, item => item.Value);
 

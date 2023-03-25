@@ -19,6 +19,326 @@ namespace LogRegPage.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("LogRegPage.Models.Country", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CountryCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Countries");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CountryCode = "AL",
+                            Name = "Albania"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CountryCode = "AD",
+                            Name = "Andorra"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CountryCode = "AT",
+                            Name = "Austria"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CountryCode = "AZ",
+                            Name = "Azerbaijan"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CountryCode = "AM",
+                            Name = "Armenia"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CountryCode = "BY",
+                            Name = "Belarus"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CountryCode = "BE",
+                            Name = "Belgium"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CountryCode = "BA",
+                            Name = "Bosnia and Herzegovina"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CountryCode = "BG",
+                            Name = "Bulgaria"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            CountryCode = "HR",
+                            Name = "Croatia"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            CountryCode = "CY",
+                            Name = "Cyprus"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            CountryCode = "CZ",
+                            Name = "Czech Republic"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            CountryCode = "DK",
+                            Name = "Denmark"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            CountryCode = "EE",
+                            Name = "Estonia"
+                        },
+                        new
+                        {
+                            Id = 15,
+                            CountryCode = "FI",
+                            Name = "Finland"
+                        },
+                        new
+                        {
+                            Id = 16,
+                            CountryCode = "FR",
+                            Name = "France"
+                        },
+                        new
+                        {
+                            Id = 17,
+                            CountryCode = "DE",
+                            Name = "Germany"
+                        },
+                        new
+                        {
+                            Id = 18,
+                            CountryCode = "GE",
+                            Name = "Georgia"
+                        },
+                        new
+                        {
+                            Id = 19,
+                            CountryCode = "GR",
+                            Name = "Greece"
+                        },
+                        new
+                        {
+                            Id = 20,
+                            CountryCode = "HU",
+                            Name = "Hungary"
+                        },
+                        new
+                        {
+                            Id = 21,
+                            CountryCode = "IS",
+                            Name = "Iceland"
+                        },
+                        new
+                        {
+                            Id = 22,
+                            CountryCode = "IE",
+                            Name = "Ireland"
+                        },
+                        new
+                        {
+                            Id = 23,
+                            CountryCode = "IT",
+                            Name = "Italy"
+                        },
+                        new
+                        {
+                            Id = 24,
+                            CountryCode = "XK",
+                            Name = "Kosovo"
+                        },
+                        new
+                        {
+                            Id = 25,
+                            CountryCode = "LV",
+                            Name = "Latvia"
+                        },
+                        new
+                        {
+                            Id = 26,
+                            CountryCode = "LI",
+                            Name = "Liechtenstein"
+                        },
+                        new
+                        {
+                            Id = 27,
+                            CountryCode = "LT",
+                            Name = "Lithuania"
+                        },
+                        new
+                        {
+                            Id = 28,
+                            CountryCode = "LU",
+                            Name = "Luxembourg"
+                        },
+                        new
+                        {
+                            Id = 29,
+                            CountryCode = "MK",
+                            Name = "North Macedonia"
+                        },
+                        new
+                        {
+                            Id = 30,
+                            CountryCode = "MT",
+                            Name = "Malta"
+                        },
+                        new
+                        {
+                            Id = 31,
+                            CountryCode = "MD",
+                            Name = "Moldova"
+                        },
+                        new
+                        {
+                            Id = 32,
+                            CountryCode = "MC",
+                            Name = "Monaco"
+                        },
+                        new
+                        {
+                            Id = 33,
+                            CountryCode = "ME",
+                            Name = "Montenegro"
+                        },
+                        new
+                        {
+                            Id = 34,
+                            CountryCode = "NL",
+                            Name = "The Netherlands"
+                        },
+                        new
+                        {
+                            Id = 35,
+                            CountryCode = "NO",
+                            Name = "Norway"
+                        },
+                        new
+                        {
+                            Id = 36,
+                            CountryCode = "PL",
+                            Name = "Poland"
+                        },
+                        new
+                        {
+                            Id = 37,
+                            CountryCode = "PT",
+                            Name = "Portugal"
+                        },
+                        new
+                        {
+                            Id = 38,
+                            CountryCode = "RO",
+                            Name = "Romania"
+                        },
+                        new
+                        {
+                            Id = 39,
+                            CountryCode = "RU",
+                            Name = "Russia"
+                        },
+                        new
+                        {
+                            Id = 40,
+                            CountryCode = "SM",
+                            Name = "San Marino"
+                        },
+                        new
+                        {
+                            Id = 41,
+                            CountryCode = "RS",
+                            Name = "Serbia"
+                        },
+                        new
+                        {
+                            Id = 42,
+                            CountryCode = "SK",
+                            Name = "Slovakia"
+                        },
+                        new
+                        {
+                            Id = 43,
+                            CountryCode = "SI",
+                            Name = "Slovenia"
+                        },
+                        new
+                        {
+                            Id = 44,
+                            CountryCode = "ES",
+                            Name = "Spain"
+                        },
+                        new
+                        {
+                            Id = 45,
+                            CountryCode = "SE",
+                            Name = "Sweden"
+                        },
+                        new
+                        {
+                            Id = 46,
+                            CountryCode = "CH",
+                            Name = "Switzerland"
+                        },
+                        new
+                        {
+                            Id = 47,
+                            CountryCode = "TR",
+                            Name = "Türkiye"
+                        },
+                        new
+                        {
+                            Id = 48,
+                            CountryCode = "UA",
+                            Name = "Ukraine"
+                        },
+                        new
+                        {
+                            Id = 49,
+                            CountryCode = "UK",
+                            Name = "United Kingdom"
+                        },
+                        new
+                        {
+                            Id = 50,
+                            CountryCode = "VA",
+                            Name = "Vatican City"
+                        });
+                });
+
             modelBuilder.Entity("LogRegPage.Models.Score", b =>
                 {
                     b.Property<int>("Id")

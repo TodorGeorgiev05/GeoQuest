@@ -660,6 +660,7 @@ namespace LogRegPage
             // scoreLabel
             // 
             this.scoreLabel.AutoSize = true;
+            this.scoreLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.scoreLabel.Location = new System.Drawing.Point(858, 33);
             this.scoreLabel.Name = "scoreLabel";
             this.scoreLabel.Size = new System.Drawing.Size(45, 17);
